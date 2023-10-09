@@ -622,6 +622,10 @@ h1, h2, h3{
     font-family: 'Black Bones';
 }
 
+p{
+    font-family: 'Roboto';
+}
+
 .slide3 .outer-Container{
     padding-top: 40px;
 }

@@ -36,6 +36,11 @@ body
     font-size: 1.6em;
 }
 
+.slide1 h2{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .slide4 {
     background: #8d1a1a;
     color: #ffffff;
@@ -345,7 +350,7 @@ li a {
     color:black;
     flex-direction: column;
     align-items: center;
-    width: 375px;
+    width: 300px;
     border-radius: 50px;
     margin-bottom: 0;
     padding-bottom: 0.3em;
@@ -362,9 +367,6 @@ li a {
     font-size: 0.26em;
     text-align: center;
 }
-.slide4 img{
-    width: 200px;
-}
 
 .slide4 h2{
     font-size: 0.5em;
@@ -375,7 +377,7 @@ li a {
 }
 
 #imgprojet{
-    width: 330px;
+    width: 260px;
     border-radius: 30px;
 }
 
@@ -535,7 +537,9 @@ hr {
 h1, h2, h3{
     font-family: 'Black Bones';
 }
-
+p{
+    font-family: 'Roboto';
+}
 .slide4, .slide5{
         padding-top: 40px;;
 }
