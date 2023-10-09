@@ -354,6 +354,7 @@ li a {
     border-radius: 50px;
     margin-bottom: 0;
     padding-bottom: 0.3em;
+    margin-left: 
 }
 
 .slide4 h1 {
@@ -515,6 +516,7 @@ hr {
 .slide6 .zl{
     display: flex;
     flex-direction: column;
+    margin: 10px ;
     gap:15px;
 }
 
@@ -528,6 +530,7 @@ hr {
     -webkit-box-shadow: 1px 3px 8px 0px #000000d4;
     box-shadow: 1px 3px 8px 0px #000000d4;
     border-radius: 30%;
+    margin: 0 20px 0 20px;
 }
 
 .slide4 .iner-wrapper:hover {
