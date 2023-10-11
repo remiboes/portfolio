@@ -415,33 +415,6 @@ li a {
 }
 
 
-.bd {
-    height: 0.3px;
-    background-color: none;
-    box-shadow: 0px 2px 1px 0px #000000;
-    width: 100%;
-}
-
-#chevron1,#chevron2,#chevron3,#chevron4 {
-    cursor: pointer;
-    width: 0.5em;
-    opacity: 0.6;
-    margin-top: -10px;
-    transform: rotate(180deg);
-    transition: transform 0.5s ease;
-}
-
-
-#moreisa,#morerobot,#moretipe1,#moretipe2 {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.5s ease;
-}
-
-.show {
-    height: auto;
-}
-
 
 .design-section {
     display: flex;
@@ -615,7 +588,7 @@ li a {
 }
 
 .slide4 .iner-wrapper:hover {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 h1, h2, h3{

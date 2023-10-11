@@ -66,7 +66,7 @@ body
 .slide2 p {
     margin: 1em;
     text-align: center;
-    font-size: x-large;
+    font-size: 1em;;
     font-style: italic;
 }
 /* Style du pied de page */
@@ -132,9 +132,12 @@ body
     margin-bottom: 20px;
 }
 
-.slide4 .iner-wrapper{
+.slide3 .iner-wrapper{
+    width:90%;
     display: flex;
-    gap:20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap:30px;
 }
 
 .zoneprojet{
@@ -146,7 +149,7 @@ body
 .skill-bar .info span {
     display: block;
     margin: 10px 2px;
-    font-size: 22px;
+    font-size: 15px;
     font-weight: 500;
     color: #ffffff;
     line-height: 1;
@@ -154,11 +157,8 @@ body
 }
 
 .skill-bar {
-    flex: 1;
-    min-width: 150px;
-    max-width: 175px;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 100px;
+    margin: 0;
 }
 
 .progress-bar {
@@ -166,7 +166,7 @@ body
     overflow: hidden;
     margin: 1px 0px;
     width: 100%;
-    height: 8px;
+    height: 6px;
     background-color: #ffffff1a;
     border-radius: 10px;
     -webkit-transform: scaleX(0);
@@ -329,8 +329,13 @@ body
     width: 25%;
 }
 
+.proteus span{
+    width: 50%;
+}
+
 .slide4 .iner-wrapper {
     /*background-color: #d04141;*/
+    text-align: center;
     background-color: rgba(255, 255, 255, 0.95);
     color:black;
     flex-direction: column;
@@ -339,7 +344,6 @@ body
     border-radius: 50px;
     margin-bottom: 0;
     padding-bottom: 0.3em;
-    margin-left: 
 }
 
 .slide4 h1 {
@@ -444,7 +448,7 @@ hr {
     margin-bottom: 0;
 }
 .slide5 p{
-    font-size: 1.5em;
+    font-size: 1.1em;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -591,4 +595,18 @@ ul{
 
 .col-lg-7{
     display: none;
+}
+
+a {
+    z-index: 3;
+}
+
+.slide3 img{
+    transform: scale(0.8);
+    margin-top: -5px;
+}
+
+.slide4 .iner-wrapper p{
+    margin-top: 10px;
+    margin-bottom: 10px
 }
