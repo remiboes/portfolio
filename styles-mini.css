@@ -355,7 +355,7 @@ body
 .slide4 p{
     margin-bottom: 0;
     margin-top: 0;
-    font-size: 0.26em;
+    font-size: 0.2em;
     text-align: center;
 }
 
@@ -512,6 +512,7 @@ hr {
 
 .slide6 p{
     margin-bottom: 30px;
+    font-size: 0.22em;
 }
 
 .inside {
