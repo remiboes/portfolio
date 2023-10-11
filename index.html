@@ -17,14 +17,15 @@
     <link rel="stylesheet" href="style-carousel.css">
     <link rel="stylesheet" href="stylemodal.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="styles.css" media="screen">
+    <link rel="stylesheet" href="styles.css" media="screen and (min-width:700px)">
     <link rel="stylesheet" href="styles-mini.css" media="screen and (max-width:700px)">
+    <link rel="stylesheet" href="navstyle.css" media="screen and (max-width:700px)">
     <title>Mon Portfolio</title>
 </head>
 
 <body id="body">
 
-    <nav>
+    <nav id="barrenav">
         <ul>
             <li><a href="#body">Présentation</a></li>
             <li><a href="#s4">Projets</a></li>
@@ -34,6 +35,20 @@
             <li><a href="#slide7">Contact</a></li>
         </ul>
     </nav>
+        <div id="content">
+        <div class="menu-trigger"><i class="fa fa-bars" aria-hidden="true"></i></div>
+    </div>
+    <!-- Navigation -->
+<nav id="slide-menu">
+  <ul>
+            <li><a href="#body">Présentation</a></li>
+            <li><a href="#s4">Projets</a></li>
+            <li><a href="#slide3">Compétences</a></li>
+            <li><a href="#slide5">Formations</a></li>
+            <li><a href="#slide6">Loisirs</a></li>
+            <li><a href="#slide7">Contact</a></li>
+  </ul>
+</nav>
 
 
     <!--<section id="homepage">-->
@@ -43,7 +58,7 @@
             <h2>Élève ingénieur en microélectronique et informatique</h2>
         </div>
         <div class="slide2">
-            <p>Je suis étudiant en deuxième année du cursus ISMIN (Ingénieur Systèmes Microélectronique et Informatique) au sein des Mines de Saint-Étienne. Mon parcours académique m'a fourni une solide base de connaissances, que j'ai enrichie au fil des années en tant qu'autodidacte passionné.<br><br>Au coeur de cette formation se trouve l'électronique et l'informatique, des domaines qui me poussent à explorer constamment les limites de la technologie. Que ce soit à travers la programmation, la conception de circuits électroniques, la création de sites web ou la réalisation de projets robotiques innovants, je suis inspiré par les possibilités infinies qu'offre la technologie.<br><br>Ce portfolio est l'occasion pour moi de partager mon parcours, mes réalisations et mes projets dans ces domaines passionnants.</p>
+            <p>Je suis étudiant en deuxième année du cursus ISMIN (Ingénieur Systèmes Microélectronique et Informatique) au sein des Mines de Saint-Étienne. Mon parcours académique m'a fourni une solide base de connaissances, que j'ai enrichie au fil des années en tant qu'autodidacte passionné.<br><br>Au coeur de cette formation se trouve l'électronique et l'informatique, des domaines qui me poussent à explorer constamment les limites de la technologie. Que ce soit à travers la programmation, la conception de circuits électroniques, la création de sites web ou la réalisation de projets robotiques, je suis inspiré par les possibilités qu'offre la technologie.<br><br>Ce portfolio est l'occasion pour moi de partager mon parcours, mes réalisations et mes projets dans ces domaines.</p>
         </div>
 
         <div class="slide3" id="slide3">
@@ -273,7 +288,7 @@
                         <p>2022-2025</p>
                         <hr />
                     </div>
-                    
+
                     <div class="timeline-component timeline-content">
                         <h3>Lycée Thiers - CPGE MP</h3>
                         <p>Classe Préparatoire aux Grandes Ecoles spécialité Maths-Physique</p>
@@ -288,9 +303,9 @@
                         <p>2019-2022</p>
                         <hr />
                     </div>
-                    
-                    
-                    
+
+
+
                     <div class="timeline-empty">
                     </div>
 
@@ -312,7 +327,7 @@
                         <p>2016-2019</p>
                         <hr />
                     </div>
-                    
+
                 </div>
             </section>
         </div>
@@ -522,4 +537,5 @@
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
     <script src="script-carousel.js"></script>
+    <script src="navscript.js" media="screen and (max-width:700px)"></script>
 </body></html>
