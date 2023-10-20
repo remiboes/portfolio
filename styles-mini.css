@@ -8,6 +8,9 @@ body
 {  
 /*overflow-x:hidden;  */
 }  
+
+html, body {  overflow-x: hidden !important;  width: 100%;  }
+
 @font-face {
     font-family: 'Black Bones';
     src: url('BlackBones.woff2') format('woff2'),
@@ -615,3 +618,4 @@ a {
 .container{
     width: 350px;
 }
+
