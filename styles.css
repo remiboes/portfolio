@@ -618,7 +618,7 @@ p{
 
 .carousel-container {
     position: relative;
-    width: 50%; /* Changer la largeur selon vos besoins */
+    width: 35%; /* Changer la largeur selon vos besoins */
     overflow: hidden;
 }
 
@@ -663,6 +663,6 @@ p{
     display: none;
 }
 
-.col-lg-7{
-    display: none;
+.slide1 h2{
+    font-size: 1em
 }

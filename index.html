@@ -12,6 +12,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Style -->
     <link rel="stylesheet" href="style-carousel.css">
@@ -24,7 +27,11 @@
 </head>
 
 <body id="body">
-
+<script>
+  AOS.init();
+</script>
+    
+    
     <nav id="barrenav">
         <ul>
             <li><a href="#body">Présentation</a></li>
@@ -54,18 +61,18 @@
     <!--<section id="homepage">-->
     <div class="slides">
         <div class="slide1" id="slide1">
-            <h1>BOES Rémi</h1>
-            <h2>Élève ingénieur en microélectronique et informatique</h2>
+            <h1 data-aos="zoom-in" data-aos-duration="2000" >BOES Rémi</h1>
+            <h2 data-aos="zoom-in" data-aos-duration="2000">Élève ingénieur en microélectronique et informatique</h2>
         </div>
         <div class="slide2">
-            <p>Je suis étudiant en deuxième année du cursus ISMIN (Ingénieur Systèmes Microélectronique et Informatique) au sein des Mines de Saint-Étienne. Mon parcours académique m'a fourni une solide base de connaissances, que j'ai enrichie au fil des années en tant qu'autodidacte passionné.<br><br>Au coeur de cette formation se trouve l'électronique et l'informatique, des domaines qui me poussent à explorer constamment les limites de la technologie. Que ce soit à travers la programmation, la conception de circuits électroniques, la création de sites web ou la réalisation de projets robotiques, je suis inspiré par les possibilités qu'offre la technologie.<br><br>Ce portfolio est l'occasion pour moi de partager mon parcours, mes réalisations et mes projets dans ces domaines.</p>
+            <p data-aos="zoom-in-up" data-aos-duration="1000" >Je suis étudiant en deuxième année du cursus ISMIN (Ingénieur Systèmes Microélectronique et Informatique) au sein des Mines de Saint-Étienne. Mon parcours académique m'a fourni une solide base de connaissances, que j'ai enrichie au fil des années en tant qu'autodidacte passionné.<br><br>Au coeur de cette formation se trouve l'électronique et l'informatique, des domaines qui me poussent à explorer constamment les limites de la technologie. Que ce soit à travers la programmation, la conception de circuits électroniques, la création de sites web ou la réalisation de projets robotiques, je suis inspiré par les possibilités qu'offre la technologie.<br><br>Ce portfolio est l'occasion pour moi de partager mon parcours, mes réalisations et mes projets dans ces domaines.</p>
         </div>
 
         <div class="slide3" id="slide3">
             <div class="outer-Container">
-                <h1>Mes Compétences</h1>
-                <h2>Langues :</h2>
-                <div class="iner-wrapper">
+                <h1 data-aos="zoom-in" >Mes Compétences</h1>
+                <h2 data-aos="fade-right" data-aos-duration="1000">Langues :</h2>
+                <div class="iner-wrapper" data-aos="fade-right" data-aos-duration="1000">
                     <div class="skill-bar">
                         <div class="info"><span>Français</span></div>
                         <div class="progress-bar francais"><span></span></div>
@@ -98,8 +105,8 @@
                         </div>
                     </div>
                 </div>
-                <h2>Informatique :</h2>
-                <div class="iner-wrapper">
+                <h2 data-aos="fade-left" data-aos-duration="1000">Informatique :</h2>
+                <div class="iner-wrapper" data-aos="fade-left" data-aos-duration="1000">
                     <div class="skill-bar">
                         <div class="info"><span>WEB</span></div>
                         <div class="progress-bar web"><span></span></div>
@@ -150,8 +157,8 @@
                         </div>
                     </div>
                 </div>
-                <h2>Electronique :</h2>
-                <div class="iner-wrapper">
+                <h2 data-aos="fade-right" data-aos-duration="1000">Electronique :</h2>
+                <div class="iner-wrapper" data-aos="fade-right" data-aos-duration="1000">
                     <div class="skill-bar">
                         <div class="info"><span>Arduino</span></div>
                         <div class="progress-bar arduino"><span></span></div>
@@ -181,8 +188,8 @@
                         </div>
                     </div>
                 </div>
-                <h2>Divers :</h2>
-                <div class="iner-wrapper">
+                <h2 data-aos="fade-left" data-aos-duration="1000">Divers :</h2>
+                <div class="iner-wrapper" data-aos="fade-left" data-aos-duration="1000">
                     <div class="skill-bar">
                         <div class="info"><span>MS Office</span></div>
                         <div class="progress-bar msoffice"><span></span></div>
@@ -218,9 +225,9 @@
             </div>
         </div>
         <div class="slide4" id="s4">
-            <h1>Projets</h1>
+            <h1 data-aos="zoom-in">Projets</h1>
             <div class="zoneprojet">
-                <a href="#modal-isa" id="modalid">
+                <a href="#modal-isa" id="modalid" data-aos="flip-up" data-aos-duration="1000">
                     <div class="isa" id="isa">
                         <div class="iner-wrapper">
                             <h2>Projet ISA</h2>
@@ -229,7 +236,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="#modal-robot" class="morerobot">
+                <a href="#modal-robot" class="morerobot" data-aos="flip-up" data-aos-duration="1000">
                     <div class="robot">
                         <div class="iner-wrapper">
                             <h2>Projet Robot</h2>
@@ -238,7 +245,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="#modal-tipe1" class="moretipe1">
+                <a href="#modal-tipe1" class="moretipe1" data-aos="flip-up" data-aos-duration="1000">
                     <div class="tipe1">
                         <div class="iner-wrapper">
                             <h2>TIPE Evacuation</h2>
@@ -248,7 +255,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="#modal-tipe2" class="moretipe2">
+                <a href="#modal-tipe2" class="moretipe2" data-aos="flip-up" data-aos-duration="1000">
                     <div class="tipe2">
                         <div class="iner-wrapper">
                             <h2>TIPE Pagerank</h2>
@@ -261,38 +268,38 @@
             </div>
         </div>
         <div class="slide5" id="slide5">
-            <h1>Formations</h1>
+            <h1 data-aos="zoom-in">Formations</h1>
             <section class="design-section">
                 <div class="timeline">
 
                     <div class="timeline-empty">
                     </div>
 
-                    <div class="timeline-middle">
+                    <div class="timeline-middle" data-aos="zoom-out-right" data-aos-duration="1000">
                         <div class="timeline-circle">
                             <p class="g">2022-2025</p>
                         </div>
                     </div>
-                    <div class="timeline-component timeline-content">
+                    <div class="timeline-component timeline-content" data-aos="zoom-out-right" data-aos-duration="1000">
                         <h3>Mines St Etienne - ISMIN</h3>
                         <p>Ecole d'ingénieur spécialisée en microélectronique et informatique</p>
                     </div>
-                    <div class="date-circle">
+                    <div class="date-circle" data-aos="zoom-out-right" data-aos-duration="1000">
                         <hr />
                         <p>2022-2025</p>
                         <hr />
                     </div>
 
-                    <div class="timeline-component timeline-content">
+                    <div class="timeline-component timeline-content" data-aos="zoom-out-left" data-aos-duration="1000">
                         <h3>Lycée Thiers - CPGE MP</h3>
                         <p>Classe Préparatoire aux Grandes Ecoles spécialité Maths-Physique</p>
                     </div>
-                    <div class="timeline-middle">
+                    <div class="timeline-middle" data-aos="zoom-out-left" data-aos-duration="1000">
                         <div class="timeline-circle">
                             <p class="d">2019-2022</p>
                         </div>
                     </div>
-                    <div class="date-circle">
+                    <div class="date-circle" data-aos="zoom-out-left" data-aos-duration="1000">
                         <hr />
                         <p>2019-2022</p>
                         <hr />
@@ -306,17 +313,17 @@
                     <div class="timeline-empty">
                     </div>
 
-                    <div class="timeline-middle">
+                    <div class="timeline-middle" data-aos="zoom-out-right" data-aos-duration="1000">
                         <div class="timeline-circle">
                             <p class="g">2016-2019</p>
                         </div>
                     </div>
-                    <div class=" timeline-component timeline-content">
+                    <div class=" timeline-component timeline-content" data-aos="zoom-out-right" data-aos-duration="1000">
                         <h3>Lycée Joliot-Curie - BAC S</h3>
                         <p>Enseignement au bac général scientifique - Option européenne italien</p>
                     </div>
 
-                    <div class="date-circle">
+                    <div class="date-circle" data-aos="zoom-out-right" data-aos-duration="1000">
                         <hr />
                         <p>2016-2019</p>
                         <hr />
@@ -326,9 +333,9 @@
             </section>
         </div>
         <div class="slide6" id="slide6">
-            <h1>Loisirs</h1>
+            <h1 data-aos="zoom-in">Loisirs</h1>
             <div class="zoneloisir">
-                <div class="inside">
+                <div class="inside" data-aos="flip-down" data-aos-duration="1000">
                     <div class="zl danse">
                         <div class="skill-logo">
                             <img src="logo/breakdance.png" class="break">
@@ -337,7 +344,7 @@
                         <p>Je danse depuis 5 ans, avec une expérience en compagnie, des concours nationaux, des représentations, et des battles. Mes styles de danse incluent le hip-hop, le breakdance et le contemporain.</p>
                     </div>
                 </div>
-                <div class="inside">
+                <div class="inside" data-aos="flip-down" data-aos-duration="1000">
                     <div class="zl modelisation">
                         <div class="skill-logo">
                             <img src="logo/3d.png" class="3d">
@@ -346,7 +353,7 @@
                         <p>Je pratique la modélisation 3D avec Fusion 360. J'utilise mes modèles pour créer des pièces, des créations, et des figurines que j'imprime ensuite en 3D avec une imprimante à résine.</p>
                     </div>
                 </div>
-                <div class="inside">
+                <div class="inside" data-aos="flip-down" data-aos-duration="1000">
                     <div class="zl informatique">
                         <div class="skill-logo">
                             <img src="logo/informatique.png" class="info">
@@ -357,54 +364,8 @@
                 </div>
             </div>
         </div>
-        <div class="content" id=slide7>
-
-            <div class="container">
-
-
-                <div class="row justify-content-center">
-                    <div class="col-md-10">
-
-                        <div class="row align-items-center">
-                            <div class="col-lg-7 mb-5 mb-lg-0">
-
-                                <h2 class="mb-5">Laissez-moi un message</h2>
-
-                                <form class="border-right pr-5 mb-5" method="post" id="contactForm" name="contactForm">
-                                    <div class="row">
-                                        <div class="col-md-6 form-group">
-                                            <input type="text" class="form-control" name="fname" id="fname" placeholder="Prénom">
-                                        </div>
-                                        <div class="col-md-6 form-group">
-                                            <input type="text" class="form-control" name="lname" id="lname" placeholder="Nom">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 form-group">
-                                            <input type="text" class="form-control" name="email" id="email" placeholder="Email">
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12 form-group">
-                                            <textarea class="form-control" name="message" id="message" cols="30" rows="7" placeholder="Ecrivez votre message"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <input type="submit" value="Envoyer" class="btn btn-primary rounded-0 py-2 px-4">
-                                            <span class="submitting"></span>
-                                        </div>
-                                    </div>
-                                </form>
-
-                                <div id="form-message-warning mt-4"></div>
-                                <div id="form-message-success">
-                                    Message envoyé, merci!
-                                </div>
-
-                            </div>
-                            <div class="col-lg-4 ml-auto">
+        <div class=slide7>
+                            <div class="container" data-aos="zoom-in" data-aos-duration="1000">
                                 <h3 class="mb-4">Contact</h3>
                                 <div class="contactsec">
                                     <img src="logo/tel.png" class="numero">
@@ -425,11 +386,7 @@
                                         <img src="logo/cv.png" class="cv"></a>
                                     <p>CV</p>
                                 </div>
-                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
