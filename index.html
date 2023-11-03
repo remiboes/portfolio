@@ -13,8 +13,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="screen and (max-width:700px)">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" media="screen and (max-width:700px)"></script>
 
     <!-- Style -->
     <link rel="stylesheet" href="style-carousel.css">
@@ -35,9 +35,9 @@
     <nav id="barrenav">
         <ul>
             <li><a href="#body">Présentation</a></li>
-            <li><a href="#s4">Projets</a></li>
             <li><a href="#slide3">Compétences</a></li>
             <li><a href="#slide5">Formations</a></li>
+            <li><a href="#s4">Projets</a></li>
             <li><a href="#slide6">Loisirs</a></li>
             <li><a href="#slide7">Contact</a></li>
         </ul>
@@ -224,54 +224,31 @@
                 </div>
             </div>
         </div>
-        <div class="slide4" id="s4">
-            <h1 data-aos="zoom-in">Projets</h1>
-            <div class="zoneprojet">
-                <a href="#modal-isa" id="modalid" data-aos="flip-up" data-aos-duration="1000">
-                    <div class="isa" id="isa">
-                        <div class="iner-wrapper">
-                            <h2>Projet ISA</h2>
-                            <p>Faire concevoir une maquette mélant art et science par des élèves de primaire.</p>
-                            <img src="images/isa1.jpg" id="imgprojet">
-                        </div>
-                    </div>
-                </a>
-                <a href="#modal-robot" class="morerobot" data-aos="flip-up" data-aos-duration="1000">
-                    <div class="robot">
-                        <div class="iner-wrapper">
-                            <h2>Projet Robot</h2>
-                            <p>Conception logicielle et matérielle d'un robot radiocommandé.</p>
-                            <img src="images/robot.png" id="imgprojet">
-                        </div>
-                    </div>
-                </a>
-                <a href="#modal-tipe1" class="moretipe1" data-aos="flip-up" data-aos-duration="1000">
-                    <div class="tipe1">
-                        <div class="iner-wrapper">
-                            <h2>TIPE Evacuation</h2>
-                            <p>Modélisation et optimisation de la configuration d'une
-                                pièce lors d’une évacuation.</p>
-                            <img src="images/ev.png" id="imgprojet">
-                        </div>
-                    </div>
-                </a>
-                <a href="#modal-tipe2" class="moretipe2" data-aos="flip-up" data-aos-duration="1000">
-                    <div class="tipe2">
-                        <div class="iner-wrapper">
-                            <h2>TIPE Pagerank</h2>
-                            <p>Méthodes de calculs et modélisation du Pagerank, modèle
-                                de référencement des sites web.</p>
-                            <img src="images/pagerk.png" id="imgprojet">
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
         <div class="slide5" id="slide5">
             <h1 data-aos="zoom-in">Formations</h1>
             <section class="design-section">
                 <div class="timeline">
 
+                    <div class="timeline-component timeline-content" data-aos="zoom-out-left" data-aos-duration="1000">
+                        <h3>IBM AI Engineering</h3>
+                        <p>Formation  en IA, outils Python (SciPy, ScikitLearn, Keras, PyTorch, TensorFlow), projets concrets</p>
+                    </div>
+                    <div class="timeline-middle" data-aos="zoom-out-left" data-aos-duration="1000">
+                        <div class="timeline-circle">
+                            <p class="d">2023</p>
+                        </div>
+                    </div>
+                    <div class="date-circle" data-aos="zoom-out-left" data-aos-duration="1000">
+                        <hr />
+                        <p>2023</p>
+                        <hr />
+                    </div>
+
+
+
+                    <div class="timeline-empty">
+                    </div>
+                    
                     <div class="timeline-empty">
                     </div>
 
@@ -331,6 +308,49 @@
 
                 </div>
             </section>
+        </div>
+        <div class="slide4" id="s4">
+            <h1 data-aos="zoom-in">Projets</h1>
+            <div class="zoneprojet">
+                <a href="#modal-isa" id="modalid" data-aos="flip-up" data-aos-duration="1000">
+                    <div class="isa" id="isa">
+                        <div class="iner-wrapper">
+                            <h2>Projet ISA</h2>
+                            <p>Faire concevoir une maquette mélant art et science par des élèves de primaire.</p>
+                            <img src="images/isa1.jpg" id="imgprojet">
+                        </div>
+                    </div>
+                </a>
+                <a href="#modal-robot" class="morerobot" data-aos="flip-up" data-aos-duration="1000">
+                    <div class="robot">
+                        <div class="iner-wrapper">
+                            <h2>Projet Robot</h2>
+                            <p>Conception logicielle et matérielle d'un robot radiocommandé.</p>
+                            <img src="images/robot.png" id="imgprojet">
+                        </div>
+                    </div>
+                </a>
+                <a href="#modal-tipe1" class="moretipe1" data-aos="flip-up" data-aos-duration="1000">
+                    <div class="tipe1">
+                        <div class="iner-wrapper">
+                            <h2>TIPE Evacuation</h2>
+                            <p>Modélisation et optimisation de la configuration d'une
+                                pièce lors d’une évacuation.</p>
+                            <img src="images/ev.png" id="imgprojet">
+                        </div>
+                    </div>
+                </a>
+                <a href="#modal-tipe2" class="moretipe2" data-aos="flip-up" data-aos-duration="1000">
+                    <div class="tipe2">
+                        <div class="iner-wrapper">
+                            <h2>TIPE Pagerank</h2>
+                            <p>Méthodes de calculs et modélisation du Pagerank, modèle
+                                de référencement des sites web.</p>
+                            <img src="images/pagerk.png" id="imgprojet">
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
         <div class="slide6" id="slide6">
             <h1 data-aos="zoom-in">Loisirs</h1>
