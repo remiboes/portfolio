@@ -602,10 +602,6 @@ ul{
     display: none;
 }
 
-a {
-    z-index: 3;
-}
-
 .slide3 img{
     transform: scale(0.8);
     margin-top: -5px;
