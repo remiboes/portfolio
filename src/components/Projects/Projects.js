@@ -1,93 +1,136 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
+import React, { useState } from "react";
+import { Container } from "react-bootstrap";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
+import HaloEffect from "../halloeffect";
+import chatify from "../../Assets/pagerk.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
+import editor from "../../Assets/Projects/codeEditor.png";
+import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
+import { DiReact, DiCss3, DiFirebase } from "react-icons/di";
+import { SiTailwindcss, SiMarkdown } from "react-icons/si";
+
+const projects = [
+  {
+    id: 1,
+    name: "Chatify",
+    image: chatify,
+    skills: [
+      { name: "React.js", icon: <DiReact /> },
+      { name: "Material-UI", icon: <DiFirebase /> },
+      { name: "Firebase", icon: <DiFirebase /> }
+    ],
+    description: "Personal Chat Room or Workspace to share resources and hangout with friends.",
+    details: "Chatify is a personal chat room or workspace built with React.js, Material-UI, and Firebase. It features real-time messaging, image sharing, and message reactions.Chatify is a personal chat room or workspace built with React.js, Material-UI, and Firebase. It features real-time messaging, image sharing, and message reactions.Chatify is a personal chat room or workspace built with React.js, Material-UI, and Firebase. It features real-time messaging, image sharing, and message reactions.Chatify is a personal chat room or workspace built with React.js, Material-UI, and Firebase. It features real-time messaging, image sharing, and message reactions.Chatify is a personal chat room or workspace built with React.js, Material-UI, and Firebase. It features real-time messaging, image sharing, and message reactions.Chatify is a personal chat room or workspace built with React.js, Material-UI, and Firebase. It features real-time messaging, image sharing, and message reactions.Chatify is a personal chat room or workspace built with React.js, Material-UI, and Firebase. It features real-time messaging, image sharing, and message reactions.Chatify is a personal chat room or workspace built with React.js, Material-UI, and Firebase. It features real-time messaging, image sharing, and message reactions.Chatify is a personal chat room or workspace built with React.js, Material-UI, and Firebase. It features real-time messaging, image sharing, and message reactions.Chatify is a personal chat room or workspace built with React.js, Material-UI, and Firebase. It features real-time messaging, image sharing, and message reactions.Chatify is a personal chat room or workspace built with React.js, Material-UI, and Firebase. It features real-time messaging, image sharing, and message reactions.Chatify is a personal chat room or workspace built with React.js, Material-UI, and Firebase. It features real-time messaging, image sharing, and message reactions.Chatify is a personal chat room or workspace built with React.js, Material-UI, and Firebase. It features real-time messaging, image sharing, and message reactions.Chatify is a personal chat room or workspace built with React.js, Material-UI, and Firebase. It features real-time messaging, image sharing, and message reactions.Chatify is a personal chat room or workspace built with React.js, Material-UI, and Firebase. It features real-time messaging, image sharing, and message reactions.",
+    ghLink: "https://github.com/soumyajit4419/Chatify",
+    demoLink: "https://chatify-49.web.app/"
+  },
+  {
+    id: 2,
+    name: "Bits-0f-C0de",
+    image: bitsOfCode,
+    skills: [
+      { name: "Next.js", icon: <DiReact /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+      { name: "Markdown", icon: <SiMarkdown /> }
+    ],
+    description: "My personal blog page built with Next.js and Tailwind CSS.",
+    details: "Bits-0f-C0de is my personal blog page built with Next.js and Tailwind CSS. It takes content from markdown files and renders it using Next.js. The site supports dark mode and is easy to maintain.",
+    ghLink: "https://github.com/soumyajit4419/Bits-0f-C0de",
+    demoLink: "https://blogs.soumya-jit.tech/"
+  },
+  {
+    id: 3,
+    name: "Editor.io",
+    image: editor,
+    skills: [
+      { name: "React.js", icon: <DiReact /> },
+      { name: "HTML", icon: <AiFillHtml5 /> },
+      { name: "CSS", icon: <DiCss3 /> }
+    ],
+    description: "Online code and markdown editor built with React.js.",
+    details: "Editor.io is an online code and markdown editor built with React.js. It supports HTML, CSS, and JS code with instant preview. The markdown editor allows building README files with GFM and custom HTML tags.",
+    ghLink: "https://github.com/soumyajit4419/Editor.io",
+    demoLink: "https://editor.soumya-jit.tech/"
+  }
+];
 
 function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleCardClick = (project) => {
+    setSelectedProject(project);
+    // Désactive le défilement de la page principale
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+    // Réactive le défilement de la page principale
+    document.body.style.overflow = "auto";
+  };
+
   return (
     <Container fluid className="project-section">
       <Particle />
+      <HaloEffect />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          All my <strong className="purple">Projects </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Here are a few projects I've worked on.
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
-            />
-          </Col>
+        <div className="project-cards-container">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="project-card"
+              onClick={() => handleCardClick(project)}
+            >
+              <img src={project.image} alt={project.name} className="project-image" />
+              <h4 className="project-name">{project.name}</h4>
+              <div className="project-skills">
+                {project.skills.map((skill, index) => (
+                  <span key={index} className="skill-badge">
+                    {skill.icon}
+                    {skill.name}
+                  </span>
+                ))}
+              </div>
+              <div className="skill-separator"></div>
+              <p className="project-description">{project.description}</p>
+            </div>
+          ))}
+        </div>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
-        </Row>
+        {selectedProject && (
+          <div className="modal-overlay" onClick={closeModal}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <button className="close-button" onClick={closeModal}>×</button>
+              <h2 className="modal-title">{selectedProject.name}</h2>
+              <div class="modal-body">
+                <div class="modal-image-container">
+                  <img src={selectedProject.image} alt={selectedProject.name} className="modal-image" />
+                </div>
+                <div class="modal-text">
+                  <div className="modal-skills">
+                    {selectedProject.skills.map((skill, index) => (
+                      <span key={index} className="modal-skill-badge">
+                        {skill.icon}
+                        {skill.name}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="modal-description">{selectedProject.details}</p>
+                  <div className="modal-links">
+                    <a href={selectedProject.ghLink} target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href={selectedProject.demoLink} target="_blank" rel="noopener noreferrer">Live Demo</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </Container>
     </Container>
   );
