@@ -887,21 +887,22 @@ body {
 
 .experience-tabs {
   display: flex;
-  background-color: #000000; /* Fond noir */
+  background-color: #000000; /* Black background */
   border-radius: 40px;
   margin-left: 5%;
   margin-right: 5%;
+  height: auto;
   overflow: hidden;
 }
 
 .tab-list {
   flex: 1;
-  max-width: 250px; /* Largeur fixe pour les onglets */
-  background-color: #1a1a1a; /* Fond noir légèrement plus clair pour les onglets */
-  height: auto; /* Hauteur automatique pour éviter la barre de défilement */
-  list-style-type: none; /* Suppression des puces */
-  padding: 0; /* Suppression des marges/paddings par défaut */
-  margin: 0; /* Suppression des marges/paddings par défaut */
+  max-width: 250px; /* Fixed width for the tabs */
+  background-color: #1a1a1a; /* Slightly lighter black background for the tabs */
+  height: auto; /* Auto height to avoid scrollbar */
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding/margins */
+  margin: 0; /* Remove default padding/margins */
 }
 
 .tab-item {
@@ -913,30 +914,29 @@ body {
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  list-style-type: none; /* Assure que les onglets n'ont pas de puces */
+  list-style-type: none; /* Ensure no bullet points on tabs */
   border: none;
 }
 
 .tab-item .tab-logo {
-  width: 50px; /* Taille du logo */
-  height: 50px; /* Taille du logo */
-  margin-right: 12px; /* Espace entre le logo et le texte */
-  background-color: #ffffff; /* Fond blanc */
-  border-radius: 50%; /* Forme circulaire */
+  width: 50px; /* Logo size */
+  height: 50px; /* Logo size */
+  margin-right: 12px; /* Space between logo and text */
+  background-color: #ffffff; /* White background */
+  border-radius: 50%; /* Circular shape */
   display: inline-block;
 }
 
 .tab-item.active {
-  background-color: #3497a8; /* Couleur de l'onglet actif */
+  background-color: #3497a8; /* Active tab color */
   color: #ffffff;
 }
 
 .tab-item:hover {
-  background-color: #193f50; /* Couleur au survol */
+  background-color: #193f50; /* Hover color */
 }
 
 .tab-content {
-  min-height: 450px;
   flex: 3;
   padding: 20px;
   color: #ffffff;
@@ -946,15 +946,41 @@ body {
 
 .tab-content .role {
   font-size: 1.2em;
-  color: #3497a8; /* Couleur blanche pour le rôle */
+  color: #3497a8;
   margin-bottom: 5px;
 }
 
 .tab-content .date {
   font-size: 0.9em;
-  color: #3497a8; /* Couleur grise pour la date */
+  color: #3497a8;
   margin-bottom: 20px;
 }
+
+.description-container {
+  overflow: hidden;
+  transition: height 0.5s ease; /* Smooth transition for height */
+}
+
+.description {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.more-button {
+  background-color: #3497a8;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.more-button:hover {
+  background-color: #28768c; /* Darker blue on hover */
+}
+
 
 .timeline-container {
   width: 100%;
@@ -1001,24 +1027,23 @@ body {
   background-color: #3497a8;
   border-radius: 50%;
   position: absolute;
-  top: -8px;
+  top: 4px;
   left: 55%;
   transform: translateY(-50%);
   z-index: 2;
 }
 
 .education-card {
-  display: flex;
-  align-items: flex-start;
-  max-width: 350px;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   border-radius: 30px;
-  padding: 15px;
+  padding: 20px;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   z-index: 3;
   margin-top: 50px;
   margin-left: 50px;
+  width: 400px;
+  height: 170px;
 }
 
 .education-card:hover {
@@ -1026,73 +1051,88 @@ body {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.589);
 }
 
+.education-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
 .school-logo {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   margin-right: 15px;
   object-fit: contain;
   background-color: #ffffff;
 }
 
-.education-details {
-  color: #ffffff;
+.school-info {
+  display: flex;
+  flex-direction: column;
 }
 
-.education-details h3 {
+.school-info h3 {
   margin: 0;
   color: #3497a8;
   font-size: 1.2em;
 }
 
-.education-details .date {
+.date {
   color: #aaaaaa;
-  margin-bottom: 8px;
   font-size: 0.9em;
+  margin-top: 5px;
 }
 
-.education-details .school {
+.education-body {
+  border-top: 1px solid #ffffff40; /* Adds a subtle line separating the header and body */
+  padding-top: 10px;
+}
+
+.school {
   color: #ffffff;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
-.education-details .percentage {
-  margin-top: 8px;
+.percentage, .achievements {
   color: #c4c4c4;
   font-size: 0.9em;
+  margin-bottom: 5px;
 }
 
-.education-details .achievements {
-  margin-top: 8px;
+.achievements {
   color: #f4d03f;
-  font-size: 0.9em;
 }
+
 
 /* Style for the advance and rewind buttons */
 .advance-button, .rewind-button {
   position: absolute;
-  top: 20px;
-  background-color: #3497a8;
-  color: #ffffff;
-  padding: 10px 15px;
+  top: 4px; /* Adjusted for vertical centering */
+  background-color: transparent; /* Make the button background transparent */
   border: none;
-  border-radius: 5px;
+  height: 40px;
+  width: 100px;
   cursor: pointer;
-  font-size: 1em;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Remove default padding */
+}
+
+.advance-button img, .rewind-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the image scales nicely within the button */
 }
 
 .advance-button {
-  right: 20px;
+  right: -30.1px;
 }
 
 .rewind-button {
-  left: 20px;
-}
-
-.advance-button:hover, .rewind-button:hover {
-  background-color: #28768c;
+  left: -30.2px;
 }
 
 

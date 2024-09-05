@@ -7,6 +7,8 @@ import minesLogo from "../../Assets/minesLogo.png";
 import ibmLogo from "../../Assets/ibmLogo.png";
 import thiersLogo from "../../Assets/thiersLogo.svg";
 import joliotCurieLogo from "../../Assets/joliotcurieLogo.png";
+import next from "../../Assets/next1.png";
+import prev from "../../Assets/prev1.png";
 
 const educationData = [
   {
@@ -127,10 +129,10 @@ function EducationSection() {
   return (
     <div className="timeline-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <button className="advance-button" onClick={advanceTimeline}>
-        Advance 10s
+        <img src={next} alt="Next" />
       </button>
       <button className="rewind-button" onClick={rewindTimeline}>
-        Rewind 10s
+        <img src={prev} alt="Previous" />
       </button>
       <div className="timeline" ref={timelineRef}>
         <div className="event-line"></div> {/* Ligne centrale de la timeline */}

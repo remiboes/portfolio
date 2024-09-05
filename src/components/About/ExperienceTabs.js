@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 // Import des images
 import thalesLogo from "../../Assets/thales-logo.png";
@@ -31,32 +31,58 @@ const experiences = [
 
 function ExperienceTabs() {
     const [activeTab, setActiveTab] = useState(0);
+    const [showDescription, setShowDescription] = useState(false);
+    const [descriptionHeight, setDescriptionHeight] = useState("0px");
+    const descriptionRef = useRef(null);
+
+    const toggleDescription = () => {
+        setShowDescription((prev) => !prev);
+    };
+
+    useEffect(() => {
+        if (showDescription) {
+        setDescriptionHeight(`${descriptionRef.current.scrollHeight}px`);
+        } else {
+        setDescriptionHeight("0px");
+        }
+    }, [showDescription, activeTab]);
 
     return (
         <div className="experience-tabs">
-            <div className="tab-list">
-                {experiences.map((exp, index) => (
-                    <div
-                        key={index}
-                        className={`tab-item ${activeTab === index ? "active" : ""}`}
-                        onClick={() => setActiveTab(index)}
-                    >
-                        <img src={exp.logo} alt={`${exp.title} logo`} className="tab-logo" />
-                        {exp.title}
-                    </div>
-                ))}
+        <div className="tab-list">
+            {experiences.map((exp, index) => (
+            <div
+                key={index}
+                className={`tab-item ${activeTab === index ? "active" : ""}`}
+                onClick={() => {
+                setActiveTab(index);
+                setShowDescription(false); // Hide description when switching tabs
+                }}
+            >
+                <img src={exp.logo} alt={`${exp.title} logo`} className="tab-logo" />
+                {exp.title}
             </div>
-            <div className="tab-content">
-                <h3>{experiences[activeTab].title}</h3>
-                <h4 className="role">{experiences[activeTab].role}</h4>
-                <p className="date">{experiences[activeTab].date}</p>
-                {experiences[activeTab].description.split('\n\n').map((paragraph, idx) => (
-                    <p key={idx} className="description">{paragraph}</p>
-                ))}
+            ))}
+        </div>
+        <div className="tab-content">
+            <h3>{experiences[activeTab].title}</h3>
+            <h4 className="role">{experiences[activeTab].role}</h4>
+            <p className="date">{experiences[activeTab].date}</p>
+            <div
+            className="description-container"
+            style={{ height: descriptionHeight }}
+            ref={descriptionRef}
+            >
+            {experiences[activeTab].description.split('\n\n').map((paragraph, idx) => (
+                <p key={idx} className="description">{paragraph}</p>
+            ))}
             </div>
+            <button className="more-button" onClick={toggleDescription}>
+            {showDescription ? "Show Less" : "More"}
+            </button>
+        </div>
         </div>
     );
-}
-  
+    }
 
 export default ExperienceTabs;
