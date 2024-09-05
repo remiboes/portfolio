@@ -3,14 +3,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/rb logo.png";
-import { Link } from "react-router-dom";
-import { ImBlog } from "react-icons/im";
-import {
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-} from "react-icons/ai";
-
+import cv from "../Assets/CV.pdf";
+import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
@@ -26,6 +20,15 @@ function NavBar() {
   }
 
   window.addEventListener("scroll", scrollHandler);
+
+  // Function to handle scrolling to a section
+  const handleScrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    updateExpanded(false); // Close the navbar after clicking
+  };
 
   return (
     <Navbar
@@ -51,16 +54,18 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+              <Nav.Link
+                href="#home"
+                onClick={() => handleScrollToSection("home")}
+              >
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
-                as={Link}
-                to="/about"
-                onClick={() => updateExpanded(false)}
+                href="#about"
+                onClick={() => handleScrollToSection("about")}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
               </Nav.Link>
@@ -68,9 +73,8 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                as={Link}
-                to="/project"
-                onClick={() => updateExpanded(false)}
+                href="#project-section"
+                onClick={() => handleScrollToSection("projects")}
               >
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
@@ -80,15 +84,14 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/resume"
-                onClick={() => updateExpanded(false)}
+            <Nav.Link
+                href={cv} // Path to your CV file in the public folder
+                target="_blank" // Opens in a new tab
+                rel="noopener noreferrer" // Security measure
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
-
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -97,3 +100,4 @@ function NavBar() {
 }
 
 export default NavBar;
+
