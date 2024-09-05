@@ -6,9 +6,28 @@ import isaProject from "../../Assets/Projects/isa.jpg"; // Placeholder image for
 import robotProject from "../../Assets/Projects/robot.png"; // Placeholder image for Robot project
 import tipeEvacuation from "../../Assets/Projects/evacuation.png"; // Placeholder image for TIPE Evacuation
 import pagerank from "../../Assets/Projects/pagerk.png"; // Placeholder image for PageRank project
-import { AiFillHtml5 } from "react-icons/ai";
-import { DiReact, DiCss3 } from "react-icons/di";
-import { SiTailwindcss, SiMarkdown } from "react-icons/si";
+import arduinoLogo from "../../Assets/arduinoLogo.png";
+import stm32Logo from "../../Assets/stm32Logo.png";
+import pythonLogo from "../../Assets/pythonLogo.png";
+import sustainabilityLogo from "../../Assets/sustain.png";
+import teamworkLogo from "../../Assets/teamw.png";
+import embedc from "../../Assets/cemb.png";
+import communication from "../../Assets/signalp.png";
+import modelisation from "../../Assets/modelisation.png";
+import atom from "../../Assets/atom.png";
+import graph from "../../Assets/graph.png";
+import analisis from "../../Assets/analisis.png";
+import isadoc from "../../Assets/doc/rapport_ISA.pdf"
+import robotsofware from "../../Assets/doc/software_report.pdf"
+import robothardware from "../../Assets/doc/hardware_report.pdf"
+import mcotevacuation from "../../Assets/doc/MCOT_evacuation.pdf"
+import diapoevacuation from "../../Assets/doc/presentation_evacuation.pdf"
+import mcotpagerank from "../../Assets/doc/MCOT_pagerank.pdf"
+import diapopagerank from "../../Assets/doc/presentation_pagerank.pdf"
+
+const renderIcon = (iconSrc) => {
+  return <img src={iconSrc} alt="tech logo" style={{ width: "18px", height: "18px" }} />;
+};
 
 const projects = [
   {
@@ -16,9 +35,9 @@ const projects = [
     name: "ISA Project: Electrified Models on Pollinators",
     image: isaProject,
     skills: [
-      { name: "Arduino", icon: <DiReact /> },
-      { name: "Sustainability ", icon: <AiFillHtml5 /> },
-      { name: "Teamwork", icon: <DiCss3 /> }
+      { name: "Arduino", icon: renderIcon(arduinoLogo) },
+      { name: "Sustainability", icon: renderIcon(sustainabilityLogo) },
+      { name: "Teamwork", icon: renderIcon(teamworkLogo) }
     ],
     description: "Collaborative project with elementary students to create electrified models of pollinators.",
     details: `As part of my engineering studies, I participated in a captivating solidarity engineering project titled "Science and Arts: Creating an Electrified Artwork on the Theme of Pollinators." Our team collaborated with Claire Dauphin Primary School in Auriol to carry out this project, which aimed to introduce children to technology through an artistic approach.
@@ -30,17 +49,18 @@ const projects = [
   \n\nAt the final presentation, we displayed the models to the students, showing the results that closely resembled the designs created together. Although we faced some wiring challenges that caused short circuits, we managed to fix one model and successfully light up the sun on the second. The children were excited and proud of their contributions to the project.
 
   \n\nThis experience allowed me to develop my engineering skills, collaborate effectively within a team, and share my enthusiasm for technology with younger students. It was a rewarding experience, combining innovation and creativity with education and sustainability. It also served as a valuable reminder of the importance of preparation and foresight when managing complex projects.`,
-    ghLink: "#",
-    demoLink: "#"
+    links: [
+      { name: "Project report", location: isadoc }
+    ]
   },
   {
     id: 2,
     name: "Robot Project",
     image: robotProject,
     skills: [
-      { name: "STM32", icon: <DiReact /> },
-      { name: "C embedded", icon: <AiFillHtml5 /> },
-      { name: "Communication protocols", icon: <DiCss3 /> }
+      { name: "STM32", icon: renderIcon(stm32Logo) },
+      { name: "Embedded C", icon: renderIcon(embedc) },
+      { name: "Communication Protocols", icon: renderIcon(communication) }
     ],
     description: `A collaborative robot project with advanced functionalities including navigation, communication, and interaction.`,
     details: `Lexane Cassaing and I collaborated on a complex robot project, equipped with multiple interconnected functionalities. This robot was designed to accomplish a variety of tasks, including navigation, interaction with its environment, and communication with the user.
@@ -54,17 +74,19 @@ const projects = [
     \n\nCommunication is also a central aspect of the project. An OOK (On-Off Keying) signal is used to establish wireless communication between the remote control and the robot. Additionally, the I2C bus is employed to allow different components to communicate with the microcontroller. To power the entire system, a voltage regulation mechanism ensures a consistent power supply.
     
     \n\nIn conclusion, this robot project illustrates a diverse set of skills, ranging from electronics to motor control, from wireless communication to circuit design. This robot is capable of moving, detecting its environment, and interacting with the user via the remote control.`,
-    ghLink: "#",
-    demoLink: "#"
+    links: [
+      { name: "Hardware report", location: robotsofware },
+      { name: "Software report", location: robothardware }
+    ]
   },
   {
     id: 3,
     name: "Crowd Evacuation Optimization",
     image: tipeEvacuation,
     skills: [
-      { name: "Python", icon: <SiTailwindcss /> },
-      { name: "Computational Simulation", icon: <SiMarkdown /> },
-      { name: "Practical Computing", icon: <AiFillHtml5 /> }
+      { name: "Python", icon: renderIcon(pythonLogo) },
+      { name: "Computational Simulation", icon: renderIcon(modelisation) },
+      { name: "Applied Physics", icon: renderIcon(atom) }
     ],
     description: "Optimizing room configurations for crowd evacuation using mathematical models.",
     details: `I worked on a project focused on optimizing room configurations for crowd evacuation, aiming to improve the efficiency and safety of mass evacuations by using advanced modeling techniques.
@@ -76,17 +98,19 @@ const projects = [
     \n\nIn the final phase, I analyzed and compared the results from both models. The objective was to determine which room configuration, particularly with the addition of obstacles, allowed for faster and more efficient evacuations. The models were tested under various room configurations to assess their respective performances.
 
     \n\nOverall, this project was an exciting exploration of crowd modeling and computational simulation methods. It highlighted the critical importance of prevention and safety in mass evacuation scenarios, while also developing valuable skills in mathematical modeling, practical computing, and data analysis.`,
-    ghLink: "#",
-    demoLink: "#"
+    links: [
+      { name: "Abstract", location: mcotevacuation },
+      { name: "Presentation", location: diapoevacuation }
+    ]
   },
   {
     id: 4,
     name: "PageRank Simulation",
     image: pagerank,
     skills: [
-      { name: "Python", icon: <DiReact /> },
-      { name: "Graph Theory", icon: <DiReact /> },
-      { name: "Numerical Methods", icon: <SiTailwindcss /> },
+      { name: "Python", icon: renderIcon(pythonLogo) },
+      { name: "Graph Theory", icon: renderIcon(graph) },
+      { name: "Numerical Resolution", icon: renderIcon(analisis) },
     ],
     description: "Understanding and simulating the PageRank algorithm for web search optimization.",
     details: `The PageRank algorithm is central to search engines and plays a crucial role in ranking web pages. Understanding this model is key to optimizing search algorithms and ensuring relevant results for users. During this project, I delved into the complex model of PageRank by implementing a series of rigorous technical and analytical activities.
@@ -98,8 +122,10 @@ const projects = [
     \n\nI then analyzed the performance of these methods by applying them to graphs of different sizes, assessing both spatial and temporal complexity. This allowed me to compare the efficiency and accuracy of each method.
 
     \n\nThis project showcased my proficiency in applied mathematics, computer science, and advanced numerical methods for solving complex problems, demonstrating my ability to tackle both theoretical and practical challenges in algorithm optimization.`,
-    ghLink: "#",
-    demoLink: "#"
+    links: [
+      { name: "Abstract", location: mcotpagerank },
+      { name: "Presentation", location: diapopagerank }
+    ]
   }
 ];
 
@@ -140,7 +166,7 @@ function Projects() {
               <h4 className="project-name">{project.name}</h4>
               <div className="project-skills">
                 {project.skills.map((skill, index) => (
-                  <span key={index} className="skill-badge">
+                  <span key={index} className="skill-badge" id={skill.name}>
                     {skill.icon}
                     {skill.name}
                   </span>
@@ -164,7 +190,7 @@ function Projects() {
                 <div class="modal-text">
                   <div className="modal-skills">
                     {selectedProject.skills.map((skill, index) => (
-                      <span key={index} className="modal-skill-badge">
+                      <span key={index} className="modal-skill-badge" id={skill.name}>
                         {skill.icon}
                         {skill.name}
                       </span>
@@ -177,8 +203,11 @@ function Projects() {
 
                   </p>
                   <div className="modal-links">
-                    <a href={selectedProject.ghLink} target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href={selectedProject.demoLink} target="_blank" rel="noopener noreferrer">Live Demo</a>
+                    {selectedProject.links.map((link, index) => (
+                        <a href={link.location} target="_blank" rel="noopener noreferrer">
+                          {link.name}
+                        </a>
+                      ))}
                   </div>
                 </div>
               </div>

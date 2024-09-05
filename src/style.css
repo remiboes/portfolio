@@ -448,7 +448,7 @@ body {
   padding-top: 100px;
   padding-bottom: 50px ;
   color: white !important;
-  z-index: 2;
+  z-index: 1;
 }
 
 .home-about-social-links {
@@ -595,6 +595,50 @@ body {
   background-color: #ff9800; /* Une autre couleur */
 }
 
+#Arduino {
+  background-color: #e91e63;
+}
+
+#Sustainability {
+  background-color: #58e91e42;
+}
+
+#Python {
+  background-color: #3497a8;
+}
+
+#Teamwork {
+  background-color: #ff0099c6;
+}
+
+#STM32 {
+  background-color: #e91e63;
+}
+
+#Embedded\ C {
+  background-color: #3497a8;
+}
+
+#Communication\ Protocols {
+  background-color: #00ffd56b;
+}
+
+#Computational\ Simulation {
+  background-color: #e91e1ec7;
+}
+
+#Applied\ Physics {
+  background-color: #ff9800;
+}
+
+#Graph\ Theory {
+  background-color: #ff9800;
+}
+
+#Numerical\ Resolution {
+  background-color: #e91e1ec7;
+}
+
 .skill-badge img {
   margin-right: 5px;
   width: 16px;
@@ -705,7 +749,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.757);
   display: flex;
   justify-content: center;
   align-items: flex-start;
