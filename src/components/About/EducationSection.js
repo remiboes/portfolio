@@ -51,7 +51,7 @@ const educationData = [
 function EducationSection() {
   const timelineRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
-  const maxProgress = 0.4; // Maximum progress limit (80% of the total timeline)
+  const maxProgress = 0.55; // Maximum progress limit (80% of the total timeline)
   const rewindLimit = -0.1; // 20% further to the left
   const [progress, setProgress] = useState(rewindLimit); // Start at -20%
   const animationFrameRef = useRef(null);
