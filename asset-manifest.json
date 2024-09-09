@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.8f30b6c9.css",
+    "main.css": "/portfolio/static/css/main.619b83c2.css",
     "main.js": "/portfolio/static/js/main.72f23777.js",
     "static/js/770.a36fb58a.chunk.js": "/portfolio/static/js/770.a36fb58a.chunk.js",
     "static/js/453.ace21015.chunk.js": "/portfolio/static/js/453.ace21015.chunk.js",
@@ -47,15 +47,15 @@
     "static/media/reactLogo.png": "/portfolio/static/media/reactLogo.8f3aaa98ad65d5c153ac.png",
     "static/media/graph.png": "/portfolio/static/media/graph.5b8d43e4ce6257aa3acb.png",
     "static/media/naval-group-logo.webp": "/portfolio/static/media/naval-group-logo.254057e2568f4a0b68ec.webp",
-    "static/media/pre.svg": "/portfolio/static/media/pre.4410c5baaa673cc131da.svg",
+    "static/media/pre.svg": "/portfolio/static/media/pre.4fb207b4d22ffd4550d8.svg",
     "index.html": "/portfolio/index.html",
-    "main.8f30b6c9.css.map": "/portfolio/static/css/main.8f30b6c9.css.map",
+    "main.619b83c2.css.map": "/portfolio/static/css/main.619b83c2.css.map",
     "main.72f23777.js.map": "/portfolio/static/js/main.72f23777.js.map",
     "770.a36fb58a.chunk.js.map": "/portfolio/static/js/770.a36fb58a.chunk.js.map",
     "453.ace21015.chunk.js.map": "/portfolio/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f30b6c9.css",
+    "static/css/main.619b83c2.css",
     "static/js/main.72f23777.js"
   ]
 }
