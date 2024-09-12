@@ -32,7 +32,7 @@ button:focus {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: #0d1f28;
+  background-color: black;
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -265,15 +265,7 @@ button:focus {
 
 @media (max-width: 999px) {
   .rocket-container {
-    font-size: 2em;;
-    position: absolute;
-    left:27%;
-    top: 30%;
-  }
-  .flame-container {
-    position: absolute;
-    bottom: -35px;
-    left: 30%;
+    display: none;
   }
 }
 
@@ -354,7 +346,6 @@ button:focus {
   z-index: 2;
 }
 
-
 .home-content {
   padding: 9rem 0 2rem !important;
   color: whitesmoke;
@@ -384,6 +375,10 @@ body {
 }
 
 @media (max-width: 999px) {
+  .allPages {
+    overflow-x: hidden !important;
+    background-color: black;
+  }
   .halo {
     display: none !important;
   }
@@ -407,6 +402,7 @@ body {
   font-size: 2.2em !important;
   color: #3497a8 !important;
   font-weight: 600 !important;
+  padding-left: 45px;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
@@ -419,7 +415,7 @@ body {
     margin-bottom: 230px !important;
   }
   .heading {
-    font-size: 4.5em !important;
+    font-size: 4em !important;
     padding-left: 20px !important;
   }
   .heading-name {
@@ -796,11 +792,13 @@ body {
   }
   .modal-content {
     max-width: 90%;
-    padding: 20px;
+    padding: 0px;
   }
   .modal-title {
-    padding-right: 10%;
-    font-size: 1.5em;
+    padding: 10%;
+    padding-right: 12%;
+    font-size: 1.75em;
+    text-align: center;
   }
   .modal-description {
     font-size: 0.9em;
@@ -874,6 +872,13 @@ body {
     0 0 14px rgba(255, 72, 0, 0.619), /* Halo orange */
     0 0 20px rgba(255, 238, 0, 0.851); /* Halo jaune */
   animation: glow 4s infinite; /* Ajoute l'animation de clignotement */
+}
+
+@media (max-width: 999px) {
+  .techstack-container {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
 }
 
 .category-header {
@@ -1026,6 +1031,16 @@ body {
   background-color: #28768c; /* Darker blue on hover */
 }
 
+@media (max-width: 999px) {
+  .experience-tabs {
+    display: block; /* Les éléments s'empilent les uns sous les autres */
+    margin: 0;
+  }
+
+  .tab-list {
+    max-width: 100%; /* La liste des expériences prend toute la largeur */
+  }
+}
 
 .timeline-container {
   width: 100%;
@@ -1242,4 +1257,8 @@ body {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+.container {
+  max-width: none !important;
 }
